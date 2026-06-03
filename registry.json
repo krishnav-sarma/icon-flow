@@ -1,0 +1,15 @@
+{
+    "animated-arrow": {
+      "name": "animated-arrow",
+      "category": "navigation",
+      "dependencies": ["motion"],
+      "file": "/registry/animated-arrow.tsx"
+    },
+  
+    "animated-heart": {
+      "name": "animated-heart",
+      "category": "social",
+      "dependencies": ["motion"],
+      "file": "/registry/animated-heart.tsx"
+    }
+  }
