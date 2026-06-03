@@ -4,7 +4,7 @@
 import { Command } from "commander";
 
 // src/config.ts
-var REGISTRY_URL = process.env.REGISTRY_URL || "http://localhost:3000";
+var REGISTRY_URL = process.env.REGISTRY_URL || "https://icon-flow-delta.vercel.app/";
 
 // src/utils/fetch-registry.ts
 async function getRegistry() {
