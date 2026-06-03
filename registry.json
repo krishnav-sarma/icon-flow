@@ -1,15 +1,23 @@
 {
-    "animated-arrow": {
-      "name": "animated-arrow",
-      "category": "navigation",
-      "dependencies": ["motion"],
-      "file": "/registry/animated-arrow.tsx"
-    },
-  
-    "animated-heart": {
-      "name": "animated-heart",
-      "category": "social",
-      "dependencies": ["motion"],
-      "file": "/registry/animated-heart.tsx"
-    }
+  "animated-arrow": {
+    "name": "animated-arrow",
+    "dependencies": [
+      "motion"
+    ],
+    "file": "/registry/animated-arrow.tsx"
+  },
+  "animated-heart": {
+    "name": "animated-heart",
+    "dependencies": [
+      "motion"
+    ],
+    "file": "/registry/animated-heart.tsx"
+  },
+  "animated-mail": {
+    "name": "animated-mail",
+    "dependencies": [
+      "motion"
+    ],
+    "file": "/registry/animated-mail.tsx"
   }
+}

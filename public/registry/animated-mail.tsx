@@ -3,7 +3,7 @@
 import { motion, useAnimation } from "motion/react";
 import { useRef } from "react";
 
-export default function AnimatedArrow() {
+export default function AnimatedMail() {
   const controls = useAnimation();
 
   const isAnimating = useRef(false);
@@ -14,24 +14,12 @@ export default function AnimatedArrow() {
 
     isAnimating.current = true;
 
-    await controls.start({
-      pathLength: [0, 1],
-      transition: {
-        duration: 0.6,
-      },
-    });
+    await controls.start("open");
 
-    await controls.start({
-      x: [0, 5, 0],
-      transition: {
-        duration: 0.4,
-      },
-    });
+    await controls.start("close");
 
     isAnimating.current = false;
 
-    // If still hovered after finishing,
-    // immediately start another cycle
     if (isHovered.current) {
       runAnimation();
     }
@@ -57,18 +45,46 @@ export default function AnimatedArrow() {
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
     >
-      <motion.path
-        d="M5 12H19"
-        initial={{ pathLength: 0 }}
-        animate={controls}
+      {/* Envelope body */}
+      <rect
+        x="3"
+        y="5"
+        width="18"
+        height="14"
+        rx="2"
       />
 
+      {/* Bottom folds */}
+      <path d="M3 7L12 13L21 7" />
+
+      {/* Animated top flap */}
       <motion.path
-        d="M13 6L19 12L13 18"
+        d="M3 7L12 13L21 7"
         animate={controls}
+        variants={{
+          open: {
+            rotateX: -35,
+            y: -1,
+            transition: {
+              duration: 0.25,
+            },
+          },
+          close: {
+            rotateX: 0,
+            y: 0,
+            transition: {
+              duration: 0.25,
+            },
+          },
+        }}
+        style={{
+          transformOrigin: "12px 7px",
+        }}
       />
     </motion.svg>
   );
