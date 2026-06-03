@@ -19,5 +19,12 @@
       "motion"
     ],
     "file": "/registry/animated-mail.tsx"
+  },
+  "animated-profile": {
+    "name": "animated-profile",
+    "dependencies": [
+      "motion"
+    ],
+    "file": "/registry/animated-profile.tsx"
   }
 }
