@@ -1,4 +1,4 @@
-# Motion Icons
+# Icon Flow
 
 Crafted animated icons for React, powered by Motion.
 
